@@ -1,131 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #ddd;
-  margin-top: 10px;
+  background-color: #28223f;
+  font-family: Montserrat, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
 }
 
-.chat-box {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  overflow: hidden;
+h3 {
+  margin: 10px 0;
 }
 
-.chats {
-  padding: 30px 15px;
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
 }
 
-.chat-avatar {
-  float: right;
+p {
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.chat-avatar .avatar {
-  width: 30px;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-.chat-body {
-  display: block;
-  margin: 10px 30px 0 0;
-  overflow: hidden;
-}
-
-.chat-body:first-child {
-  margin-top: 0;
-}
-
-.chat-content {
+.card-container {
+  background-color: #231e39;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 30px;
   position: relative;
-  display: block;
-  float: right;
-  padding: 8px 15px;
-  margin: 0 20px 10px 0;
-  clear: both;
-  color: #fff;
-  background-color: #62a8ea;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-}
-
-.chat-content:before {
-  position: absolute;
-  top: 10px;
-  right: -10px;
-  width: 0;
-  height: 0;
-  content: "";
-  border: 5px solid transparent;
-  border-left-color: #62a8ea;
-}
-
-.chat-content > p:last-child {
-  margin-bottom: 0;
-}
-
-.chat-content + .chat-content:before {
-  border-color: transparent;
-}
-
-.chat-time {
-  display: block;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.chat-left .chat-avatar {
-  float: left;
-}
-
-.chat-left .chat-body {
-  margin-right: 0;
-  margin-left: 30px;
-}
-
-.chat-left .chat-content {
-  float: left;
-  margin: 0 0 10px 20px;
-  color: #76838f;
-  background-color: #dfe9ef;
-}
-
-.chat-left .chat-content:before {
-  right: auto;
-  left: -10px;
-  border-right-color: #dfe9ef;
-  border-left-color: transparent;
-}
-
-.chat-left .chat-content + .chat-content:before {
-  border-color: transparent;
-}
-
-.chat-left .chat-time {
-  color: #a3afb7;
-}
-
-.panel-footer {
-  padding: 0 30px 15px;
-  background-color: transparent;
-  border-top: 1px solid transparent;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.avatar img {
-  width: 100%;
+  width: 350px;
   max-width: 100%;
-  height: auto;
-  border: 0 none;
-  border-radius: 1000px;
+  text-align: center;
 }
-.chat-avatar .avatar {
-  width: 30px;
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
-.avatar {
-  position: relative;
+
+.card-container .round {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+  width: 100px;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
   display: inline-block;
-  width: 40px;
-  white-space: nowrap;
-  border-radius: 1000px;
-  vertical-align: bottom;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+  color: red;
+}
+
+footer a {
+  color: #3c97bf;
+  text-decoration: none;
 }
