@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Info from "./Info";
+import getInfo from "../Services/getInfo";
 import Loader from "react-loader-spinner";
 
 export default class GetIp extends Component {
@@ -11,21 +12,8 @@ export default class GetIp extends Component {
     };
   }
 
-  async getIp() {
-    var response = await fetch("https://api64.ipify.org?format=json");
-    var ip = (await response.json()).ip;
-    return ip;
-  }
-
-  async getInfo() {
-    var ip = await this.getIp();
-    var response = await fetch(`http://ipwhois.app/json/${ip}`);
-    var info = await response.json();
-    return info;
-  }
-
   componentDidMount() {
-    this.getInfo().then((info) => this.setState({ info: info, isLoading: false }));
+    getInfo().then((info) => this.setState({ info: info, isLoading: false }));
   }
 
   render() {
