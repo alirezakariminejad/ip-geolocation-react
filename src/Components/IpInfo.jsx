@@ -29,12 +29,12 @@ export default class GetIp extends Component {
   }
 
   render() {
-    var isLoading = {this.state.isLoading};
+    var isLoading = this.state.isLoading;
     return (
       <>
-        {{isLoading} && <Loader type="Puff" color="#00BFFF" height={100} width={100} />}
+        {isLoading && <Loader type="Puff" color="#00BFFF" height={100} width={100} />}
 
-        {!{isLoading} && <Info info={this.state.info} />}
+        {!isLoading && <Info info={this.state.info} />}
       </>
     );
   }
