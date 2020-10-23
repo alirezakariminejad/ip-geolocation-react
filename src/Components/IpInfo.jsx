@@ -20,9 +20,11 @@ export default class GetIp extends Component {
     var isLoading = this.state.isLoading;
     return (
       <>
+        
         {isLoading && <Loader type="Puff" color="#00BFFF" height={100} width={100} />}
 
         {!isLoading && <Info info={this.state.info} />}
+        
       </>
     );
   }
