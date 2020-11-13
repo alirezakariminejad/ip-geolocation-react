@@ -7,7 +7,7 @@ export default function info(props) {
       <img className="round" src={props.info.country_flag} alt={props.info.country} />
       <h3>{props.info.country}</h3>
       <h5>{props.info.city}</h5>
-      <h6>ISP : {props.info.isp}</h6>
+      <h6>ISP : {props.info.isp} </h6>
       <div className="skills">
         <h5>IP : {props.info.ip}</h5>
         <h5>Latitude : {props.info.latitude}</h5>
